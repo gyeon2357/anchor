@@ -1,0 +1,389 @@
+::-moz-selection {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.99);
+}
+
+::selection {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.99);
+}
+
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+td:not([align]),
+th:not([align]) {
+  text-align: inherit;
+}
+
+html {
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  background-color: white;
+}
+
+@media screen and (min-width: 300px) {
+  html {
+    font-size: 3.125vw;
+  }
+}
+
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+section {
+  display: block;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    Helvetica, Arial, sans-serif;
+}
+
+code,
+pre {
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: auto;
+  font-family: monospace;
+}
+
+@font-face {
+  font-family: "SpoqaHanSansNeo-Light";
+  src: url(../fonts/SpoqaHanSansNeo-Light.eot);
+  src: local(※), url(../fonts/SpoqaHanSansNeo-Light.woff) format("woff");
+  unicode-range: U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7A3,
+    U+D7B0-D7FF;
+}
+@font-face {
+  font-family: "SpoqaHanSansNeo-Regular";
+  src: url(../fonts/SpoqaHanSansNeo-Regular.eot);
+  src: local(※), url(../fonts/SpoqaHanSansNeo-Regular.woff) format("woff");
+  unicode-range: U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7A3,
+    U+D7B0-D7FF;
+}
+
+@font-face {
+  font-family: "Arnold_Regular";
+  src: local(※), url(../fonts/Arnold_Regular.woff) format("woff");
+}
+@font-face {
+  font-family: "Arnold_Italic";
+  src: local(※), url(../fonts/Arnold_Italic.woff) format("woff");
+}
+
+body {
+  font-family: "Arnold_Regular", sans-serif;
+  font-size: 0.75rem;
+  word-spacing: -2px;
+  letter-spacing: 1px;
+
+  line-height: 1.725;
+  word-break: keep-all;
+  color: aliceblue;
+  cursor: default;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul {
+  font-size: 1.25rem;
+  overflow-y: hidden;
+  text-align: center;
+  right: 0px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  align-items: center;
+  grid-column-gap: 85%;
+}
+
+strong {
+  font-weight: 800;
+}
+
+@media screen and (min-width: 300px) {
+  body {
+    font-weight: 800;
+    line-height: 1.6;
+  }
+}
+
+body.fixed {
+  height: 100%;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+ 
+  transition: color 0.25s;
+  transition-delay: 0.125s;
+  cursor: pointer;
+}
+
+a:hover {
+  color: blue;
+}
+
+i {
+  font-size: 0.5rem;
+}
+
+.header {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-image: url("../images/sign1.png"); */
+  background-color: rgba(255);
+  background-size: cover;
+  background-position: top center;
+}
+
+.header::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  z-index: 9999;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.125rem 0.25rem;
+  font-size: 1.125rem;
+  color: black;
+}
+
+.header .title {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255);
+}
+
+.header .title div {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  width: 75%;
+  font-size: 1.75vw;
+  font-weight: 700;
+  line-height: 1.75;
+  text-align: center;
+  color: black;
+}
+
+.main {
+  margin-top: 100vh;
+}
+
+.section {
+  position: absolute;
+  padding: 1rem;
+  color: white;
+}
+
+li {
+  opacity: 0.1;
+  transition: opacity 0.25s;
+  transition-delay: 0.125s;
+}
+
+li:hover {
+  opacity: 1;
+}
+
+video {
+  display: block;
+  position: absolute;
+  width: 10%;
+}
+
+.content {
+  position: relative;
+  transition: color 0.25s;
+  transition-delay: 0.125s;
+}
+
+.content:hover {
+  color: black;
+}
+
+.content:nth-child(1) {
+  font-family: "Arnold_Italic", sans-serif;
+  font-size: 0.375rem;
+  background: none;
+}
+
+.content:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  top: 0.375rem;
+  left: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+  /* background-image: url("../assets/anchor.jpg"); */
+  background-size: cover;
+}
+
+.content:nth-child(2) {
+  margin-left: 50rem;
+  width: 75%;
+}
+
+@media screen and (min-width: 300px) {
+  .content:nth-child(1) {
+    margin-top: calc(100% / 15);
+    margin-left: calc(100% / 3);
+    margin-right: calc(100% / 3);
+
+    font-size: 0.75rem;
+  }
+
+  .content:nth-child(2) {
+    margin-left: calc(100% / 6);
+  }
+}
+
+.content code {
+  padding: 0 0.125em;
+  font-family: Courier;
+  line-height: 1;
+  background-color: rgba(255);
+  border-radius: 0.125em;
+}
+
+.content:not(:last-child),
+.content > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+/* // content-TEXT */
+
+div .circle {
+  position: absolute;
+
+  margin-top: 85vh;
+  margin-left: 85vw;
+
+  font-size: 1rem;
+
+  z-index: 1001;
+}
+
+@media screen and (min-width: 300px) {
+  #defaultCanvas0 {
+    margin: 0 auto;
+    position: relative;
+    pointer-events: none;
+    z-index: -1000;
+  }
+}
+
+#defaultCanvas0 {
+  margin: 0 auto;
+  position: fixed;
+  pointer-events: none;
+  z-index: -1;
+}
+
+#p5_loading {
+  display: none;
+}
